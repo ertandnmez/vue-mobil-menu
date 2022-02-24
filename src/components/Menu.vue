@@ -104,6 +104,13 @@
             this.closeMenu();
           }
         },
+        selectChange(){
+          const selectElement = document.getElementsByTagName('.basic-select');
+
+          selectElement.addEventListener('change', (event) => {
+            this.closeMenu();
+          });
+        },
         documentClick(e) {
           let element = this.$refs.bmBurgerButton;
           let target = null;
@@ -144,6 +151,7 @@
         if (!this.disableEsc) {
           document.addEventListener('keyup', this.closeMenuOnEsc);
         }
+        this.selectChange();
       },
       created: function() {
         document.addEventListener('click', this.documentClick);
