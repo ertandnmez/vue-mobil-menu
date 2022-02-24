@@ -105,7 +105,7 @@
           }
         },
         selectChange(){
-          const selectElement = document.getElementsByClassName('.basic-select');
+          const selectElement = document.querySelector('.bm-item-list > .basic-select');
 
           selectElement.addEventListener('change', (event) => {
             this.closeMenu();
@@ -152,6 +152,7 @@
           document.addEventListener('keyup', this.closeMenuOnEsc);
         }
         this.selectChange();
+
       },
       created: function() {
         document.addEventListener('click', this.documentClick);
