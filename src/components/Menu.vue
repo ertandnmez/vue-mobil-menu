@@ -106,11 +106,12 @@
           }
         },
         selectChange(){
-          const selectElement = document.querySelector('.bm-item-list > .basic-select');
+          const selectElement = document.getElementById('lang-select');
 
           selectElement.addEventListener('change', (event) => {
             this.closeMenu();
           });
+
         },
         documentClick(e) {
           let element = this.$refs.bmBurgerButton;
