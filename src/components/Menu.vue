@@ -89,6 +89,7 @@
               ? this.width + 'px'
               : '300px';
           });
+          this.selectChange();
         },
 
         closeMenu() {
@@ -151,7 +152,7 @@
         if (!this.disableEsc) {
           document.addEventListener('keyup', this.closeMenuOnEsc);
         }
-        this.selectChange();
+
 
       },
       created: function() {
