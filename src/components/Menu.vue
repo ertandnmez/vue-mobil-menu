@@ -105,7 +105,7 @@
           }
         },
         selectChange(){
-          const selectElement = document.getElementsByTagName('.basic-select');
+          const selectElement = document.getElementsByClassName('.basic-select');
 
           selectElement.addEventListener('change', (event) => {
             this.closeMenu();
