@@ -12,8 +12,8 @@
       <img src="/images/close.svg" alt="">
             </span>
     <div ref="bmBurgerButton" class="bm-burger-button" @click="openMenu" :class="{ hidden: !burgerIcon }">
-<!--      <span class="bm-burger-bars line-style" :style="{top:20 * (index * 2) + '%'}" v-for="(x, index) in 3"
-            :key="index"></span>-->
+      <!--      <span class="bm-burger-bars line-style" :style="{top:20 * (index * 2) + '%'}" v-for="(x, index) in 3"
+                  :key="index"></span>-->
       <img src="/images/open.svg" alt="">
     </div>
 
