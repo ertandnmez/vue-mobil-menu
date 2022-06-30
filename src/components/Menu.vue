@@ -6,13 +6,15 @@
       </nav>
     </div>
     <span class="bm-cross-button cross-style" @click="closeMenu" v-if="crossIcon">
-                <span v-for="(x, index) in 2" :key="x" class="bm-cross"
+<!--                <span v-for="(x, index) in 2" :key="x" class="bm-cross"
                       :style="{ position: 'absolute', width: '3px', height: '14px',transform: index === 1 ? 'rotate(45deg)' : 'rotate(-45deg)'}">
-                </span>
+                </span>-->
+      <img src="/images/close.svg" alt="">
             </span>
     <div ref="bmBurgerButton" class="bm-burger-button" @click="openMenu" :class="{ hidden: !burgerIcon }">
-      <span class="bm-burger-bars line-style" :style="{top:20 * (index * 2) + '%'}" v-for="(x, index) in 3"
-            :key="index"></span>
+<!--      <span class="bm-burger-bars line-style" :style="{top:20 * (index * 2) + '%'}" v-for="(x, index) in 3"
+            :key="index"></span>-->
+      <img src="/images/open.svg" alt="">
     </div>
 
   </div>
@@ -78,6 +80,7 @@ export default {
       this.$emit('openMenu');
       this.isSideBarOpen = true;
       this.crossIcon = true;
+      this.burgerIcon = false;
       if (!this.noOverlay) {
         document.body.classList.add('bm-overlay');
       }
@@ -99,6 +102,7 @@ export default {
       this.$emit('closeMenu');
       this.isSideBarOpen = false;
       this.crossIcon = false;
+      this.burgerIcon = true;
       document.body.classList.remove('bm-overlay');
       this.$refs.sideNav.style.width = '0px';
     },
